@@ -11,6 +11,14 @@ def planck(T, l):
 	denom = (l*1e-6)**5*(np.exp(a)-1.0)
 	return num*1e-9/denom
 
+
+def mac(T, l):
+	num1 = 4.0*h1*c1**2
+	a1 = h1*c1/(l*1e-6*k*T)
+	denom1 = (l*1e-6)**5*(np.exp(a1)-1.0)
+	return num*1e-9/denom
+
+
 T = [300,1000,3000,6000]
 L = np.logspace(-2,3,500)
 
